@@ -1,6 +1,7 @@
 package amirka.entities;
 
 import amirka.exception.Duplicate;
+import amirka.exception.NotFound;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +19,24 @@ public class Collection {
                     .equals(game.getId())) {
                 throw new Duplicate("A game with the same ID exists. Choose a different ID.");
             }
-            games.add(game);
         }
+        games.add(game);
     }
 
+    public Game findGameUsingId(String id) throws NotFound {
+        for (Game g : games) {
+            if (g.getId()
+                    .equals(id)) {
+                return g;
+            }
+        }
+        throw new NotFound("Game not found.");
+    }
 
+    @Override
+    public String toString() {
+        return "Collection{" +
+                "games=" + games +
+                '}';
+    }
 }

@@ -1,6 +1,6 @@
 package amirka.entities;
 
-public class TableGames extends Games {
+public class TableGames extends Game {
     private int players;
     private int gameDurationMin;
 

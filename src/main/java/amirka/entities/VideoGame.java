@@ -1,6 +1,6 @@
 package amirka.entities;
 
-public class VideoGame extends Games {
+public class VideoGame extends Game {
     private String platform;
     private int gameHours;
     private Genre genre;
