@@ -12,13 +12,25 @@ public class VideoGame extends Games {
         this.genre = genre;
     }
 
+    public String getPlatform() {
+        return platform;
+    }
+
+    public int getGameHours() {
+        return gameHours;
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
     @Override
     public String toString() {
         return "VideoGame{" +
                 super.toString() +
-                ", platform='" + platform + '\'' +
-                ", gameHours=" + gameHours +
-                ", genre=" + genre +
+                ", platform= '" + platform + '\'' +
+                ", gameHours= " + gameHours +
+                ", genre= " + genre +
                 '}';
     }
 }

@@ -32,10 +32,10 @@ public abstract class Games {
     @Override
     public String toString() {
         return "Games{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", year=" + year +
-                ", price=" + price +
+                "id= '" + id + '\'' +
+                ", title= '" + title + '\'' +
+                ", year= " + year +
+                ", price= " + price +
                 '}';
     }
 }
