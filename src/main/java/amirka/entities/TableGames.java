@@ -18,20 +18,15 @@ public class TableGames extends Game {
         this.players = players;
     }
 
-    public int getGameDurationMin() {
-        return gameDurationMin;
-    }
-
     public void setGameDurationMin(int gameDurationMin) {
         this.gameDurationMin = gameDurationMin;
     }
 
     @Override
     public String toString() {
-        return "TableGames{" +
+        return "TableGames: " +
                 super.toString() +
                 ", players= " + players +
-                ", gameDurationMin= " + gameDurationMin +
-                '}';
+                ", gameDurationMin= " + gameDurationMin;
     }
 }
