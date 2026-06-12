@@ -1,19 +1,19 @@
 package amirka.entities;
 
 public abstract class Game {
-    private String id;
+    private int id;
     private String title;
     private int year;
     private double price;
 
-    public Game(String id, String title, int year, double price) {
+    public Game(int id, String title, int year, double price) {
         this.id = id;
         this.title = title;
         this.year = year;
         this.price = price;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 

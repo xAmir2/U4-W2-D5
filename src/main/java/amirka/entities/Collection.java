@@ -17,17 +17,16 @@ public class Collection {
     public void addGame(Game game) throws Duplicate {
         for (Game g : games) {
             if (g.getId()
-                    .equals(game.getId())) {
+                    == game.getId()) {
                 throw new Duplicate("A game with the same ID exists. Choose a different ID.");
             }
         }
         games.add(game);
     }
 
-    public Game findGameUsingId(String id) throws NotFound {
+    public Game findGameUsingId(int id) throws NotFound {
         for (Game g : games) {
-            if (g.getId()
-                    .equals(id)) {
+            if (g.getId() == id) {
                 return g;
             }
         }
@@ -48,19 +47,19 @@ public class Collection {
                 .toList();
     }
 
-    public void removeGame(String id) throws NotFound {
+    public void removeGame(int id) throws NotFound {
         Game game = findGameUsingId(id);
         games.remove(game);
     }
 
-    public void updateGameParams(String id, double price, String title, int year) throws NotFound {
+    public void updateGameParams(int id, double price, String title, int year) throws NotFound {
         Game game = findGameUsingId(id);
         game.setPrice(price);
         game.setTitle(title);
         game.setYear(year);
     }
 
-    public void updateVideoGame(String id, String platform, int gameHours, Genre genre) throws NotFound {
+    public void updateVideoGame(int id, String platform, int gameHours, Genre genre) throws NotFound {
         Game game = findGameUsingId(id);
 
         if (!(game instanceof VideoGame video)) {
@@ -71,7 +70,7 @@ public class Collection {
         video.setGenre(genre);
     }
 
-    public void updateTableGames(String id, int players, int gameDurationMin) throws NotFound {
+    public void updateTableGames(int id, int players, int gameDurationMin) throws NotFound {
         Game game = findGameUsingId(id);
 
         if (!(game instanceof TableGames table)) {
@@ -104,8 +103,6 @@ public class Collection {
 
     @Override
     public String toString() {
-        return "Collection{" +
-                "games=" + games +
-                '}';
+        return "" + games;
     }
 }

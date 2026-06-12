@@ -1,5 +1,5 @@
 package amirka.entities;
 
 public enum Genre {
-    Adventure, Fantasy, RPG, Action, FPS, Strategy, Puzzles
+    ADVENTURE, FANTASY, RPG, ACTION, FPS, STRATEGY, PUZZLES
 }

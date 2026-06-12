@@ -5,7 +5,7 @@ public class VideoGame extends Game {
     private int gameHours;
     private Genre genre;
 
-    public VideoGame(String id, String title, int year, double price, String platform, int gameHours, Genre genre) {
+    public VideoGame(int id, String title, int year, double price, String platform, int gameHours, Genre genre) {
         super(id, title, year, price);
         this.platform = platform;
         this.gameHours = gameHours;
