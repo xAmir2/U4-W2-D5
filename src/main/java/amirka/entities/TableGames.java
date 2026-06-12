@@ -14,8 +14,16 @@ public class TableGames extends Game {
         return players;
     }
 
+    public void setPlayers(int players) {
+        this.players = players;
+    }
+
     public int getGameDurationMin() {
         return gameDurationMin;
+    }
+
+    public void setGameDurationMin(int gameDurationMin) {
+        this.gameDurationMin = gameDurationMin;
     }
 
     @Override
